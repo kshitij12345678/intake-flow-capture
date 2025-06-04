@@ -1,6 +1,6 @@
 
 // API service for backend communication
-const API_BASE_URL = process.env.REACT_APP_BACKEND_URL || 'https://api.example.com';
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'https://api.example.com';
 
 export const processPatientData = async (formData: FormData) => {
   try {
