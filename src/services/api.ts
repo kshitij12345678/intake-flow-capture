@@ -4,7 +4,7 @@ const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000'
 
 export const processPatientData = async (formData: FormData) => {
   try {
-    console.log('Sending request to:', `${API_BASE_URL}/process`);
+    console.log('Sending request to:', `${API_BASE_URL}/transcribe`);
     console.log('Environment variables:', {
       VITE_BACKEND_URL: import.meta.env.VITE_BACKEND_URL,
       API_BASE_URL: API_BASE_URL
@@ -14,7 +14,7 @@ export const processPatientData = async (formData: FormData) => {
     // In production, uncomment the actual API call below
     
     /*
-    const response = await fetch(`${API_BASE_URL}/process`, {
+    const response = await fetch(`${API_BASE_URL}/transcribe`, {
       method: 'POST',
       body: formData,
     });
