@@ -1,10 +1,14 @@
 
 // API service for backend communication
-const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'https://api.example.com';
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://127.0.0.1:8000';
 
 export const processPatientData = async (formData: FormData) => {
   try {
     console.log('Sending request to:', `${API_BASE_URL}/process`);
+    console.log('Environment variables:', {
+      VITE_BACKEND_URL: import.meta.env.VITE_BACKEND_URL,
+      API_BASE_URL: API_BASE_URL
+    });
     
     // For demo purposes, we'll simulate the API response
     // In production, uncomment the actual API call below
